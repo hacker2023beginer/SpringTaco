@@ -1,180 +1,62 @@
 # 🌮 SpringTaco
 
-SpringTaco — учебный backend/web-проект на **Java 21 и Spring Boot**, созданный для практического изучения экосистемы Spring и разработки серверных приложений.
-
-Проект использует Spring MVC, Thymeleaf, валидацию данных и стандартные инструменты Spring Boot для разработки и тестирования приложения.
-
-## 🛠️ Tech Stack
-
-* **Java 21**
-* **Spring Boot 3.5.3**
-* **Spring MVC / Spring Web**
-* **Thymeleaf**
-* **Spring Validation**
-* **Lombok**
-* **Maven**
-* **Spring Boot Test**
-
-## 📌 Project Goals
-
-Основная цель проекта — практическое изучение и применение возможностей Spring Framework:
-
-* разработка web-приложений на Spring Boot;
-* создание MVC-контроллеров;
-* обработка HTTP-запросов;
-* работа с Thymeleaf;
-* валидация пользовательских данных;
-* использование dependency injection;
-* написание тестов;
-* управление зависимостями через Maven.
-
-## 🏗️ Application Architecture
-
-Проект построен с использованием подхода **Spring MVC**:
-
-```text
-Client
-  │
-  ▼
-Controller
-  │
-  ▼
-Application / Domain Logic
-  │
-  ▼
-View / Response
-  │
-  ▼
-Thymeleaf
-```
-
-Spring MVC отвечает за обработку HTTP-запросов, контроллеры — за взаимодействие с приложением, а Thymeleaf используется для формирования HTML-страниц.
-
-## 🎨 Thymeleaf
-
-Для серверного формирования HTML используется **Thymeleaf**.
-
-Это позволяет связывать Java-модели приложения с HTML-шаблонами непосредственно на стороне сервера.
-
-## ✅ Validation
-
-Для проверки входных данных используется:
-
-```text
-spring-boot-starter-validation
-```
-
-Это позволяет валидировать данные, поступающие от пользователя, до их дальнейшей обработки приложением.
-
-## 🧪 Testing
-
-Для тестирования используется Spring Boot Test:
-
-```bash
-./mvnw test
-```
-
-Для Windows:
-
-```powershell
-.\mvnw.cmd test
-```
-
-## 🚀 Getting Started
-
-### Requirements
-
-Для запуска проекта требуется:
-
-* JDK 21;
-* Git.
-
-Maven устанавливать отдельно не требуется — проект содержит Maven Wrapper.
-
-### Clone
-
-```bash
-git clone https://github.com/hacker2023beginer/SpringTaco.git
-cd SpringTaco
-```
-
-### Run
-
-Linux / macOS:
-
-```bash
-./mvnw spring-boot:run
-```
-
-Windows:
-
-```powershell
-.\mvnw.cmd spring-boot:run
-```
-
-После запуска приложение будет доступно на локальном сервере Spring Boot.
-
-## 🔨 Build
-
-Сборка проекта:
-
-```bash
-./mvnw clean package
-```
-
-Windows:
-
-```powershell
-.\mvnw.cmd clean package
-```
-
-## 📁 Project Structure
-
-Проект использует стандартную структуру Maven:
-
-```text
-SpringTaco/
-├── .mvn/
-│   └── wrapper/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   └── resources/
-│   └── test/
-├── .gitignore
-├── .gitattributes
-├── mvnw
-├── mvnw.cmd
-├── pom.xml
-└── README.md
-```
-
-## 📚 Technologies Practiced
-
-В рамках проекта изучаются и применяются:
-
-* Spring Boot;
-* Spring MVC;
-* Thymeleaf;
-* dependency injection;
-* controllers;
-* server-side rendering;
-* data validation;
-* Maven;
-* unit/integration testing;
-* Lombok.
-
-## 📈 Project Status
-
-Проект находится в стадии разработки и используется как практический проект для изучения Java Backend и Spring Framework.
-
-## 👨‍💻 Author
-
-**Vladislav**
-
-GitHub:
-https://github.com/hacker2023beginer
+**SpringTaco** — это веб-приложение на базе фреймворка Spring Boot, предназначенное для проектирования и онлайн-заказа уникальных тако. Пользователи могут собирать свои собственные рецепты тако из доступных ингредиентов, оформлять заказы и просматривать историю.
 
 ---
 
-⭐ If you find this project useful, feel free to star the repository.
+## 🚀 Особенности (Features)
+* **Кастомизация тако:** Выбор ингредиентов по категориям (протеин, соусы, сыры, овощи).
+* **Управление заказами:** Корзина покупок и оформление доставки.
+* **Валидация данных:** Проверка ввода пользователя (например, корректность данных кредитной карты и адреса).
+* **Безопасность (опционально):** Авторизация и аутентификация пользователей с помощью Spring Security.
+
+## 🛠️ Стек технологий (Tech Stack)
+* **Backend:** Java, Spring Boot (Spring Web, Spring Data JPA, Spring Security)
+* **Database:** H2 Database (In-Memory) / MySQL / PostgreSQL
+* **Frontend:** Thymeleaf (шаблонизатор), HTML5, CSS3, Bootstrap
+* **Build Tool:** Maven / Gradle
+
+---
+
+## 💻 Как запустить проект локально
+
+### Требования
+Перед запуском убедитесь, что у вас установлены:
+* **Java Development Kit (JDK)** версии 17 или выше
+* **Maven** (или используйте встроенный `mvnw`)
+* **Git**
+
+### Инструкция по установке
+
+1. Клонируйте репозиторий на свой компьютер:
+   ```bash
+   git clone https://github.com
+   cd SpringTaco
+   ```
+
+2. Соберите проект с помощью Maven:
+   ```bash
+   ./mvnw clean package
+   ```
+   *(Для Windows используйте команду `mvnw.cmd clean package`)*
+
+3. Запустите приложение:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+
+4. Откройте браузер и перейдите по адресу:
+   [http://localhost:8080](http://localhost:8080)
+
+---
+
+## 📂 Структура проекта (основные пакеты)
+* `tacos/web` — контроллеры (Spring MVC) и конвертеры для обработки веб-запросов.
+* `tacos/data` — репозитории Spring Data для взаимодействия с базой данных.
+* `tacos/security` — конфигурация безопасности и службы пользователей.
+* `resources/templates` — HTML-шаблоны Thymeleaf для отображения страниц.
+
+---
+
+## 📝 Лицензия
+Этот проект является открытым и распространяется под лицензией [MIT](LICENSE).
